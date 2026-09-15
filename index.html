@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>最火的礼服 | $女王礼服 — The Hottest Dress on BNB</title>
+    <meta
+      name="description"
+      content="The hottest dress on BNB! Turning heads, breaking charts, and serving endless style on the way to the moon. $女王礼服"
+    />
+    <meta property="og:title" content="最火的礼服 | $女王礼服" />
+    <meta
+      property="og:description"
+      content="The hottest dress on BNB! Turning heads, breaking charts, and serving endless style on the way to the moon."
+    />
+    <meta property="og:image" content="banner.jpg" />
+    <link rel="icon" href="logo.jpg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Noto+Serif+SC:wght@500;700;900&family=Outfit:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              gold: {
+                50: "#FFF8E7",
+                100: "#F8EBC8",
+                200: "#F3D37A",
+                300: "#F0C14A",
+                400: "#F0B90B",
+                500: "#E0A91A",
+                600: "#C4961A",
+                700: "#8B6914",
+                800: "#5C450C",
+              },
+              gala: {
+                950: "#070604",
+                900: "#0B0A07",
+                800: "#14110C",
+                700: "#1C160C",
+                600: "#2A2214",
+              },
+            },
+            fontFamily: {
+              display: ['"Noto Serif SC"', "serif"],
+              serif: ['"Cormorant Garamond"', "serif"],
+              sans: ['"Outfit"', "sans-serif"],
+              script: ['"Caveat"', "cursive"],
+            },
+            boxShadow: {
+              gold: "0 0 40px rgba(240, 185, 11, 0.28)",
+              "gold-sm": "0 0 18px rgba(240, 185, 11, 0.22)",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      :root {
+        --gold: #f0b90b;
+        --gold-deep: #c4961a;
+        --cream: #f8ebc8;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        background-color: #070604;
+        color: var(--cream);
+      }
+
+      .ceremony-bg {
+        background-image: linear-gradient(
+            180deg,
+            rgba(7, 6, 4, 0.72) 0%,
+            rgba(11, 10, 7, 0.78) 38%,
+            rgba(7, 6, 4, 0.88) 100%
+          ),
+          url("ceremony-bg.jpg");
+        background-size: cover;
+        background-position: center top;
+        background-attachment: fixed;
+      }
+
+      .gold-frame {
+        border: 1px solid rgba(240, 185, 11, 0.45);
+        box-shadow:
+          inset 0 0 0 1px rgba(248, 235, 200, 0.08),
+          0 20px 60px rgba(0, 0, 0, 0.45),
+          0 0 40px rgba(240, 185, 11, 0.12);
+      }
+
+      .glass-gold {
+        background: linear-gradient(
+          160deg,
+          rgba(28, 22, 12, 0.78) 0%,
+          rgba(11, 10, 7, 0.7) 100%
+        );
+        backdrop-filter: blur(18px);
+        border: 1px solid rgba(240, 185, 11, 0.28);
+      }
+
+      .gold-text {
+        background: linear-gradient(180deg, #fff4cc 0%, #f0b90b 48%, #c4961a 100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+
+      .shimmer {
+        position: relative;
+        overflow: hidden;
+      }
+
+      .shimmer::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          110deg,
+          transparent 30%,
+          rgba(255, 255, 255, 0.28) 48%,
+          transparent 66%
+        );
+        transform: translateX(-120%);
+        animation: shimmer 3.6s ease-in-out infinite;
+      }
+
+      @keyframes shimmer {
+        100% {
+          transform: translateX(120%);
+        }
+      }
+
+      @keyframes floaty {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-10px);
+        }
+      }
+
+      @keyframes sparkle {
+        0%,
+        100% {
+          opacity: 0.15;
+          transform: scale(0.7) rotate(0deg);
+        }
+        50% {
+          opacity: 1;
+          transform: scale(1) rotate(20deg);
+        }
+      }
+
+      @keyframes marquee {
+        from {
+          transform: translateX(0);
+        }
+        to {
+          transform: translateX(-50%);
+        }
+      }
+
+      .floaty {
+        animation: floaty 5.5s ease-in-out infinite;
+      }
+
+      .marquee-track {
+        animation: marquee 28s linear infinite;
+      }
+
+      .spark {
+        position: absolute;
+        width: 6px;
+        height: 6px;
+        background: radial-gradient(circle, #fff4cc 0%, #f0b90b 55%, transparent 70%);
+        clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+        animation: sparkle 2.8s ease-in-out infinite;
+        pointer-events: none;
+      }
+
+      .ornament {
+        height: 1px;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          rgba(240, 185, 11, 0.8),
+          transparent
+        );
+      }
+
+      .step-num {
+        font-family: "Cormorant Garamond", serif;
+        background: linear-gradient(180deg, #fff4cc, #f0b90b);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+
+      .ticket {
+        background-image: radial-gradient(circle at left, #070604 8px, transparent 8.5px),
+          radial-gradient(circle at right, #070604 8px, transparent 8.5px);
+        background-position: 0 50%, 100% 50%;
+        background-repeat: no-repeat;
+      }
+
+      ::selection {
+        background: #f0b90b;
+        color: #0b0a07;
+      }
+
+      .nav-blur {
+        background: rgba(7, 6, 4, 0.62);
+        backdrop-filter: blur(16px);
+        border-bottom: 1px solid rgba(240, 185, 11, 0.18);
+      }
+
+      iframe {
+        color-scheme: dark;
+      }
+    </style>
+  </head>
+  <body class="ceremony-bg font-sans antialiased">
+    <div id="sparks" class="pointer-events-none fixed inset-0 z-0 overflow-hidden"></div>
+
+    <header class="nav-blur fixed top-0 z-50 w-full">
+      <div class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 md:px-6">
+        <a href="#top" class="flex items-center gap-3">
+          <img
+            src="logo.jpg"
+            alt="最火的礼服 logo"
+            class="h-12 w-12 rounded-full object-cover object-[center_12%] ring-2 ring-gold-400/80 shadow-gold-sm"
+          />
+          <div class="leading-tight">
+            <p class="font-display text-lg font-black gold-text md:text-xl">最火的礼服</p>
+            <p class="text-[11px] tracking-[0.22em] text-gold-200/80">$女王礼服</p>
+          </div>
+        </a>
+
+        <nav class="hidden items-center gap-8 text-sm font-medium text-gold-100/80 md:flex">
+          <a class="transition hover:text-gold-400" href="#about">About</a>
+          <a class="transition hover:text-gold-400" href="#heat">The Dress</a>
+          <a class="transition hover:text-gold-400" href="#buy">How to Buy</a>
+          <a class="transition hover:text-gold-400" href="#chart">Chart</a>
+        </nav>
+
+        <div class="flex items-center gap-2 sm:gap-3">
+          <a
+            href="https://x.com/bnbqueendress"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex h-10 w-10 items-center justify-center rounded-full border border-gold-400/40 bg-black/50 transition hover:border-gold-400 hover:shadow-gold-sm"
+            aria-label="Follow on X"
+          >
+            <img src="x.png" alt="X" class="h-4 w-4 object-contain invert" />
+          </a>
+          <a
+            href="https://flap.sh/bnb/TBA"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="shimmer rounded-full bg-gradient-to-r from-gold-300 via-gold-400 to-gold-600 px-4 py-2 text-sm font-semibold text-gala-900 shadow-gold-sm transition hover:scale-[1.03]"
+          >
+            Buy Now
+          </a>
+          <button
+            id="menuBtn"
+            class="flex h-10 w-10 items-center justify-center rounded-full border border-gold-400/40 md:hidden"
+            aria-label="Open menu"
+          >
+            <span class="text-gold-200">☰</span>
+          </button>
+        </div>
+      </div>
+      <div id="mobileMenu" class="hidden border-t border-gold-400/20 px-4 py-4 md:hidden">
+        <div class="flex flex-col gap-3 text-gold-100">
+          <a href="#about">About</a>
+          <a href="#heat">The Dress</a>
+          <a href="#buy">How to Buy</a>
+          <a href="#chart">Chart</a>
+        </div>
+      </div>
+    </header>
+
+    <main id="top" class="relative z-10">
+      <section class="relative overflow-hidden px-4 pb-16 pt-28 md:px-6 md:pb-24 md:pt-36">
+        <div class="mx-auto grid max-w-7xl items-center gap-10 lg:grid-cols-[1.05fr_0.95fr]">
+          <div>
+            <p class="font-script text-2xl text-gold-200 md:text-3xl">Same Memes. Bigger Stage.</p>
+            <h1 class="mt-3 font-display text-5xl font-black leading-[1.05] gold-text sm:text-6xl lg:text-7xl">
+              最火的礼服
+            </h1>
+            <p class="mt-2 font-serif text-2xl italic text-gold-100 md:text-3xl">$女王礼服</p>
+            <div class="ornament my-6 max-w-md"></div>
+            <p class="max-w-xl text-lg leading-relaxed text-gold-50/90 md:text-xl">
+              The hottest dress on BNB! Turning heads, breaking charts, and serving endless
+              style on the way to the moon.
+            </p>
+            <p class="mt-3 max-w-xl font-serif text-xl italic text-gold-200/90">
+              From BNB Chain to the World.
+            </p>
+
+            <div class="mt-8 flex flex-wrap items-center gap-3">
+              <a
+                href="https://flap.sh/bnb/TBA"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="shimmer inline-flex items-center rounded-full bg-gradient-to-r from-gold-300 via-gold-400 to-gold-600 px-7 py-3 text-base font-bold text-gala-900 shadow-gold transition hover:scale-[1.03]"
+              >
+                Buy Now
+              </a>
+              <a
+                href="https://dexscreener.com/bsc/TBA"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex items-center rounded-full border border-gold-400/60 bg-black/30 px-7 py-3 text-base font-semibold text-gold-100 transition hover:border-gold-400 hover:bg-gold-400/10 hover:shadow-gold-sm"
+              >
+                Chart
+              </a>
+            </div>
+
+            <div class="mt-6 flex max-w-xl flex-col gap-2 sm:flex-row sm:items-center">
+              <span class="text-xs uppercase tracking-[0.28em] text-gold-300/80">Contract</span>
+              <button
+                id="copyCa"
+                class="group flex w-full items-center justify-between gap-3 rounded-full border border-gold-400/35 bg-black/40 px-4 py-2.5 text-left transition hover:border-gold-400 hover:shadow-gold-sm"
+                type="button"
+              >
+                <code id="caValue" class="truncate font-sans text-sm text-gold-100">TBA</code>
+                <span id="copyLabel" class="shrink-0 text-xs font-semibold tracking-wider text-gold-400">COPY CA</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="relative floaty">
+            <div class="absolute -left-6 -top-6 h-24 w-24 rounded-full border border-gold-400/30"></div>
+            <div class="absolute -bottom-8 -right-4 h-32 w-32 rounded-full border border-gold-400/20"></div>
+            <div class="gold-frame relative overflow-hidden rounded-[28px]">
+              <img src="banner.jpg" alt="最火的礼服 ceremony banner" class="h-full w-full object-cover" />
+              <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-gala-950/50 via-transparent to-transparent"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="border-y border-gold-400/25 bg-black/35">
+        <div class="overflow-hidden py-3">
+          <div class="marquee-track flex w-max gap-10 text-sm uppercase tracking-[0.35em] text-gold-200">
+            <span>最火的礼服</span><span>$女王礼服</span><span>Hottest Dress on BNB</span>
+            <span>TOP 12 on the gown</span><span>Community Heat</span><span>To the Moon</span>
+            <span>最火的礼服</span><span>$女王礼服</span><span>Hottest Dress on BNB</span>
+            <span>TOP 12 on the gown</span><span>Community Heat</span><span>To the Moon</span>
+          </div>
+        </div>
+      </div>
+
+      <section id="heat" class="px-4 py-20 md:px-6 md:py-28">
+        <div class="mx-auto grid max-w-7xl gap-6 md:grid-cols-2">
+          <article class="glass-gold rounded-3xl p-8 md:p-12">
+            <p class="text-xs uppercase tracking-[0.35em] text-gold-400">Gala Rule</p>
+            <h2 class="mt-4 font-serif text-3xl leading-snug text-gold-50 md:text-4xl">
+              The higher the community heat, the more forward the spot you'll get
+            </h2>
+            <div class="ornament my-6"></div>
+            <p class="font-script text-2xl text-gold-200">Heat is the runway ranking.</p>
+          </article>
+          <article class="glass-gold rounded-3xl p-8 md:p-12">
+            <p class="text-xs uppercase tracking-[0.35em] text-gold-400">Finale</p>
+            <h2 class="mt-4 font-serif text-3xl leading-snug text-gold-50 md:text-4xl">
+              The final TOP 12 Memes will be truly printed on my dress
+            </h2>
+            <div class="ornament my-6"></div>
+            <p class="text-gold-100/80">
+              Twelve numbered panels. One gold gown. The loudest community claims the fabric.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="about" class="px-4 pb-20 md:px-6 md:pb-28">
+        <div class="mx-auto grid max-w-7xl items-center gap-10 lg:grid-cols-2">
+          <div class="gold-frame relative overflow-hidden rounded-[28px]">
+            <img src="about.jpg" alt="TOP 12 meme spots printed on the dress" class="w-full object-cover" />
+          </div>
+          <div>
+            <p class="font-script text-2xl text-gold-200">From BNB Chain to the World.</p>
+            <h2 class="mt-2 font-display text-4xl font-black gold-text md:text-5xl">About 最火的礼服</h2>
+            <p class="mt-6 text-lg leading-relaxed text-gold-50/90">
+              $女王礼服 is the hottest dress on BNB — a celebration ceremony meme where
+              community heat decides who walks first. Turning heads, breaking charts, and
+              serving endless style, this gown is a living leaderboard: the top twelve memes
+              get printed on the dress for the world to see.
+            </p>
+            <ul class="mt-8 grid grid-cols-3 gap-3 text-center">
+              <li class="glass-gold rounded-2xl px-3 py-4">
+                <p class="font-serif text-2xl text-gold-400">12</p>
+                <p class="mt-1 text-[11px] uppercase tracking-widest text-gold-100/70">Spots</p>
+              </li>
+              <li class="glass-gold rounded-2xl px-3 py-4">
+                <p class="font-serif text-2xl text-gold-400">BNB</p>
+                <p class="mt-1 text-[11px] uppercase tracking-widest text-gold-100/70">Chain</p>
+              </li>
+              <li class="glass-gold rounded-2xl px-3 py-4">
+                <p class="font-serif text-2xl text-gold-400">∞</p>
+                <p class="mt-1 text-[11px] uppercase tracking-widest text-gold-100/70">Style</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="buy" class="px-4 pb-20 md:px-6 md:pb-28">
+        <div class="mx-auto max-w-7xl">
+          <div class="mb-10 text-center">
+            <p class="font-script text-2xl text-gold-200">Enter the ceremony</p>
+            <h2 class="mt-2 font-display text-4xl font-black gold-text md:text-5xl">How to Buy</h2>
+            <p class="mx-auto mt-4 max-w-2xl text-gold-100/80">
+              Four steps to buy $女王礼服 with BNB. Arrive in gold. Leave on the dress.
+            </p>
+          </div>
+
+          <div class="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
+            <article class="ticket glass-gold rounded-3xl p-6 md:p-7">
+              <p class="step-num text-5xl font-bold">01</p>
+              <h3 class="mt-4 font-serif text-2xl text-gold-50">Get a BNB wallet</h3>
+              <p class="mt-3 text-sm leading-relaxed text-gold-100/75">
+                Install MetaMask or Trust Wallet, then switch the network to BNB Smart Chain
+                so you can enter the gala.
+              </p>
+            </article>
+            <article class="ticket glass-gold rounded-3xl p-6 md:p-7">
+              <p class="step-num text-5xl font-bold">02</p>
+              <h3 class="mt-4 font-serif text-2xl text-gold-50">Fund with BNB</h3>
+              <p class="mt-3 text-sm leading-relaxed text-gold-100/75">
+                Buy or transfer BNB into your wallet. You will swap with BNB and need a little
+                extra for gas.
+              </p>
+            </article>
+            <article class="ticket glass-gold rounded-3xl p-6 md:p-7">
+              <p class="step-num text-5xl font-bold">03</p>
+              <h3 class="mt-4 font-serif text-2xl text-gold-50">Open Flap</h3>
+              <p class="mt-3 text-sm leading-relaxed text-gold-100/75">
+                Hit Buy Now and connect your wallet on flap.sh — the velvet rope for $女王礼服.
+              </p>
+            </article>
+            <article class="ticket glass-gold rounded-3xl p-6 md:p-7">
+              <p class="step-num text-5xl font-bold">04</p>
+              <h3 class="mt-4 font-serif text-2xl text-gold-50">Swap for $女王礼服</h3>
+              <p class="mt-3 text-sm leading-relaxed text-gold-100/75">
+                Paste the CA, swap BNB for $女王礼服, and claim your heat on the hottest dress
+                on BNB.
+              </p>
+            </article>
+          </div>
+
+          <div class="mt-10 flex flex-wrap items-center justify-center gap-3">
+            <a
+              href="https://flap.sh/bnb/TBA"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="shimmer inline-flex rounded-full bg-gradient-to-r from-gold-300 via-gold-400 to-gold-600 px-8 py-3 font-bold text-gala-900 shadow-gold"
+            >
+              Buy Now
+            </a>
+            <a
+              href="https://dexscreener.com/bsc/TBA"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex rounded-full border border-gold-400/60 px-8 py-3 font-semibold text-gold-100 hover:bg-gold-400/10"
+            >
+              Chart
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section id="chart" class="px-4 pb-24 md:px-6">
+        <div class="mx-auto max-w-7xl">
+          <div class="mb-8 flex flex-col items-start justify-between gap-4 md:flex-row md:items-end">
+            <div>
+              <p class="font-script text-2xl text-gold-200">Live runway</p>
+              <h2 class="mt-2 font-display text-4xl font-black gold-text">Chart</h2>
+            </div>
+            <a
+              href="https://dexscreener.com/bsc/TBA"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-sm font-semibold tracking-wide text-gold-400 hover:text-gold-200"
+            >
+              Open Dexscreener →
+            </a>
+          </div>
+          <div class="gold-frame overflow-hidden rounded-[28px] bg-black/50">
+            <iframe
+              title="Dexscreener chart for $女王礼服"
+              src="https://dexscreener.com/bsc/TBA?embed=1&loadChartSettings=0&trades=0&tabs=0&info=0&chartLeftToolbar=0&chartTheme=dark&theme=dark&chartStyle=0&chartType=usd&interval=15"
+              class="h-[420px] w-full md:h-[640px]"
+            ></iframe>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="relative z-10 border-t border-gold-400/20 bg-black/50 px-4 py-10 md:px-6">
+      <div class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-6 md:flex-row">
+        <div class="flex items-center gap-3">
+          <img
+            src="logo.jpg"
+            alt=""
+            class="h-10 w-10 rounded-full object-cover object-[center_12%] ring-1 ring-gold-400/70"
+          />
+          <div>
+            <p class="font-display font-bold gold-text">最火的礼服</p>
+            <p class="text-xs tracking-[0.22em] text-gold-200/70">$女王礼服 · BNB</p>
+          </div>
+        </div>
+        <p class="text-center text-sm text-gold-100/60">
+          The hottest dress on BNB. Community heat prints the TOP 12.
+        </p>
+        <a
+          href="https://x.com/bnbqueendress"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="flex items-center gap-2 text-sm text-gold-200 hover:text-gold-400"
+        >
+          <img src="x.png" alt="" class="h-4 w-4 invert" />
+          @queen_dress
+        </a>
+      </div>
+    </footer>
+
+    <div
+      id="toast"
+      class="pointer-events-none fixed bottom-6 left-1/2 z-[60] -translate-x-1/2 rounded-full bg-gold-400 px-5 py-2 text-sm font-semibold text-gala-900 opacity-0 shadow-gold transition"
+    >
+      CA copied
+    </div>
+
+    <script>
+      const CA = "TBA";
+      const copyBtn = document.getElementById("copyCa");
+      const copyLabel = document.getElementById("copyLabel");
+      const toast = document.getElementById("toast");
+      const menuBtn = document.getElementById("menuBtn");
+      const mobileMenu = document.getElementById("mobileMenu");
+
+      copyBtn.addEventListener("click", async () => {
+        try {
+          await navigator.clipboard.writeText(CA);
+        } catch {
+          const input = document.createElement("input");
+          input.value = CA;
+          document.body.appendChild(input);
+          input.select();
+          document.execCommand("copy");
+          input.remove();
+        }
+        copyLabel.textContent = "COPIED";
+        toast.classList.remove("opacity-0");
+        toast.classList.add("opacity-100");
+        setTimeout(() => {
+          copyLabel.textContent = "COPY CA";
+          toast.classList.add("opacity-0");
+          toast.classList.remove("opacity-100");
+        }, 1600);
+      });
+
+      menuBtn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
+
+      document.querySelectorAll("#mobileMenu a").forEach((link) => {
+        link.addEventListener("click", () => mobileMenu.classList.add("hidden"));
+      });
+
+      const sparkRoot = document.getElementById("sparks");
+      for (let i = 0; i < 18; i += 1) {
+        const spark = document.createElement("span");
+        spark.className = "spark";
+        spark.style.left = Math.random() * 100 + "%";
+        spark.style.top = Math.random() * 100 + "%";
+        spark.style.animationDelay = Math.random() * 3 + "s";
+        spark.style.animationDuration = 2 + Math.random() * 2.5 + "s";
+        sparkRoot.appendChild(spark);
+      }
+    </script>
+  </body>
+</html>
